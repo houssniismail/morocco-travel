@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.home{
+    background-image: url('./assets/menara-marrakech.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hassle-freet-tours{
+    background-image: url('./assets/camels-and-people-going-in-desert-2023-11-27-05-06-30-utc-min.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+}

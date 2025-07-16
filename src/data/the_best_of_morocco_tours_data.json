@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "image":"src/assets/marrakech-Jamaa-fnaa-600x400.jpg",
+        "title":"14-day Tour in Morocco",
+        "description":"14-day Tour in Morocco14 day / 13 nights – If you desire to see complete Morocco and have 2 weeks time, then this tour is for you. You will see the same sites as the Classic Morocco Tour, but also add a ...",
+        "price":"2.850,00"
+    },
+    {
+        "id":2,
+        "image":"src/assets/Ben-Heddo-L-600x400.jpg",
+        "title":"11 Days Tour in Morocco",
+        "description":"This 11 day Morocco itinerary highlights the best of the country including Fez, the Sahara Desert, Marrakesh, and Essaouira. With your private driver, you will see the real Morocco ...100",
+        "price":"2.350,00"
+    },
+    {
+        "id":3,
+        "image":"src/assets/Marakech-jardin-majorelle-600x398.jpg",
+        "title":"10 Days Tour in Morocco",
+        "description":"For those wishing to explore the Imperial Cities of Morocco while still visiting the desert, have a look at this tour. You will experience the Cities, the Sahara desert, and more ...",
+        "price":"2.150,00"
+    }
+]
