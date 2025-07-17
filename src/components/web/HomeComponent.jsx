@@ -2,7 +2,9 @@ import React from 'react'
 import { BiRightArrowAlt } from "react-icons/bi";
 import Image from "../../assets/menara-marrakech.jpg"
 import Image_1 from "../../assets/3992-min-1200x800.jpg"
+import image_2 from "../../assets/2151472962-min-1200x800.jpg"
 import data from "../../data/the_best_of_morocco_tours_data.json"
+import { BiCheck } from "react-icons/bi";
 
 
 const HomeComponent = () => {
@@ -33,6 +35,38 @@ const HomeComponent = () => {
       name: "Merzouga Désert",
       image: "src/assets/Merzouga-Desert.jpg"
     }
+  ]
+
+  const whyTravelWithUs = [
+    {
+      id: 1,
+      name: "Expertise & Knowledge",
+      icon: "src/assets/icons/fame-1.png",
+      description: "As recommended in The Independent: With over 30 years of experience, Best of Morocco has knowledge of the country (Morocco) that is second to none."
+    },
+    {
+      id: 1,
+      name: "You are in safe hands",
+      icon: "src/assets/icons/secure-shield-1.png",
+      description: "Our experienced guides & drivers have dealt with every possible logistical situation imaginable, they ensure your trip in Morocco will be a once-in-a-lifetime experience."
+    },
+    {
+      id: 1,
+      name: "High Quality Service",
+      icon: "src/assets/icons/quality.png",
+      description: "We monitor guest satisfaction closely to help guide us meet excellent service. We continually seek improvements to surpass guest expectations."
+    }
+  ]
+
+
+  const evaluation = [
+    {
+      id: 1,
+      name: "Angelica T",
+      image: "",
+      date: "2024-10-09",
+      Comment: "Amazing Morocco trip We had an absolute blast. Abdul was our driver, and he was simply fantastic. He was very patient and kind; my family sometimes wanted different food, and some have diet restrictions, and he went out of his way to drive them to places where they could find food that was suitable for them. We saw so many wonderful places, including the blue city - Chefchaouen, many beautiful ancient cities, breathing architecture, ancient Roman ruins of Volubilis and spent two nights in a luxury desert camp where we were treated like family. They served us wonderful homemade meals and the views of the desert were absolutely breathtaking including the sunset while traveling on camels. Youseff was absolutely wonderful, he was always available and quickly addressed any questions we had, and helped organize the trip according to our liking. The trip was private and customized to our needs. I was a bit nervous about a private trip but after seeing tour busses jam packed with people, I realized our private trip was really the way to go and the price was"
+    },
   ]
 
   return (
@@ -161,7 +195,7 @@ const HomeComponent = () => {
 
 
       <div className="px-[41px] flex flex-col gap-10 pb-30">
-        {/* Header Section */}
+
         <div className="text-center space-y-4">
           <button className="bg-gray-200 py-3 px-10 rounded text-[20px] font-medium">
             Tours & Holidays Specialists
@@ -169,7 +203,7 @@ const HomeComponent = () => {
           <p className="text-[64px] font-bold capitalize">Popular Destinations</p>
         </div>
 
-        {/* City Cards Grid */}
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 ">
           {city?.map((item, index) => (
             <div className="relative group  bottom-0 duration-1000 hover:bottom-4" key={index}>
@@ -182,20 +216,198 @@ const HomeComponent = () => {
                 <p className="text-white text-[20px] font-bold">{item.name}</p>
               </div>
             </div>
-
-            // <div className="relative group w-full h-[300px] overflow-hidden rounded-[10px]" key={index}>
-            //   <img
-            //     className="object-cover w-full h-full"
-            //     src={item.image}
-            //     alt={item.name}
-            //   />
-            //   <div className="absolute bottom-0 left-0 right-0 bg-black/50 py-4 text-center transition-all duration-1000 group-hover:bottom-4">
-            //     <p className="text-white text-[20px] font-bold">{item.name}</p>
-            //   </div>
-            // </div>
           ))}
         </div>
       </div>
+
+
+
+      {/* <div>
+        <div>
+          <div
+            className="fusion-title title fusion-title-15 fusion-sep-none fusion-title-center fusion-title-highlight fusion-animate-once fusion-highlight-underline fusion-title-size-one"
+            data-highlight="underline"
+            data-animationoffset="top-into-view"
+            style={{
+              "--awb-text-color": "var(--awb-color1)",
+              "--awb-highlight-color": "var(--awb-color4)",
+              "--awb-highlight-top-margin": "-7px",
+              "--awb-highlight-width": "5",
+              "--awb-margin-top": "0px",
+              "--awb-margin-bottom": "60px",
+              "--awb-font-size": "120px",
+            }}
+          >
+            <h1
+              className="fusion-title-heading title-heading-center fusion-responsive-typography-calculated"
+              style={{
+                fontFamily: "var(--awb-custom_typography_1-font-family)",
+                fontWeight: "var(--awb-custom_typography_1-font-weight)",
+                fontStyle: "var(--awb-custom_typography_1-font-style)",
+                margin: 0,
+                fontSize: "1em",
+                letterSpacing: "var(--awb-custom_typography_1-letter-spacing)",
+                textTransform: "var(--awb-custom_typography_1-text-transform)",
+                lineHeight: "var(--awb-custom_typography_1-line-height)",
+              }}
+            >
+              <span className="fusion-highlighted-text-prefix" />
+              <span className="fusion-highlighted-text-wrapper">
+                <span className="fusion-highlighted-text">14-day Tour in Morocco</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 500 150"
+                  preserveAspectRatio="none"
+                  className="awb-animate"
+                >
+                  <path d="M8.1,146.2c0,0,240.6-55.6,479-13.8" />
+                </svg>
+              </span>
+              <span className="fusion-highlighted-text-postfix" />
+            </h1>
+          </div>
+        </div>
+      </div> */}
+
+      <div className=' bg-tour-days py-20  '>
+        <div className="text-center py-30 bg-black/80 h-full px-[41px] flex flex-col gap-24 ">
+          <div>
+            {/* Title with underline */}
+            <div className="relative inline-block">
+              <h1 className="kaushan-script-regular text-white text-[48px] md:text-[64px] font-[var(--awb-custom_typography_1-font-family)] leading-tight">
+                14-Day Tour In Morocco
+              </h1>
+              {/* Yellow curved SVG underline */}
+              <svg
+                className="absolute bottom-0 left-0 w-full h-4 md:h-5"
+                viewBox="0 0 500 20"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,15 C150,30 350,0 500,15"
+                  stroke="#EAC85D"
+                  strokeWidth="4"
+                  fill="transparent"
+                />
+              </svg>
+            </div>
+
+
+            <p className="text-white text-lg mt-6 font-medium">
+              All Nights In Riads/Hotels (On Bed &amp; Breakfasts Basis)
+            </p>
+          </div>
+
+          <div className=' flex flex-col gap-24 '>
+            <div className=' grid grid-cols-3 gap-16 '>
+              <div>
+                <div className=' flex gap-4 items-start'>
+                  <div>
+                    <BiCheck color=' white' size={34} />
+                  </div>
+                  <div>
+                    <p className=' text-[20px] text-start font-bold text-white'>Full-time Air-conditioned Transportation</p>
+                  </div>
+                </div>
+
+                <div className=' flex gap-4 items-start'>
+                  <div>
+                    <BiCheck color=' white' size={34} />
+                  </div>
+                  <div>
+                    <p className=' text-[20px] text-start font-bold text-white'>Professional local Guides in major cities</p>
+                  </div>
+                </div>
+
+                <div className=' flex gap-4 items-start'>
+                  <div className=''>
+                    <BiCheck color=' white' size={34} />
+                  </div>
+                  <div>
+                    <p className=' text-[20px] text-start font-bold text-white'>Sandboarding, Camel trekking</p>
+                  </div>
+                </div>
+              </div>
+              <div className=' text-end'>
+                <div>
+                  <p className=' font-bold text-[64px] text-white'>14 Days</p>
+                </div>
+                <div>
+                  <p className=' font-medium text-[20px] text-white'>Tour Length</p>
+                </div>
+              </div>
+              <div className=' text-end'>
+                <div>
+                  <p className=' font-bold text-[64px] text-white'>$ 2.850,00</p>
+                </div>
+                <div>
+                  <p className=' font-medium text-[20px] text-white'>Price Per Person</p>
+                </div>
+              </div>
+            </div>
+            <div className=" flex justify-center">
+              <button className="text-[18px] font-medium flex items-center bg-[#a6843d] text-white px-6 py-4 rounded duration-300 hover:bg-[#1e3a5f]">
+                get more info
+                <BiRightArrowAlt size={24} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className=' px-[40px] bg-gray-200'>
+        <div className=' grid grid-cols-2 gap-10 '>
+          <div  >
+            <div className=' py-10'>
+              <p className=' font-bold text-[38px]'>Why Travel With Us</p>
+            </div>
+            {
+              whyTravelWithUs?.map((item, index) => (
+                <div className=' flex flex-col gap-5 py-5' key={index}>
+                  <div className=' w-[70px] h-[70px] '>
+                    <img src={item.icon} alt={item.name} />
+                  </div>
+                  <div>
+                    <p className=' text-gray-700 font-medium text-[20px]'>{item.name}</p>
+                  </div>
+                  <div>
+                    <p className=' text-gray-700 font-light text-[20px]'>{item.description}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <div className=' py-10'>
+            <img className=' rounded-[10px] h-full' src={image_2} alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div className=' '>
+        <div>
+          {evaluation?.map((item, index) => (
+            <div key={index} className="relative">
+              <div>
+                <img src={item.image} alt="" />
+              </div>
+              <div>
+                <p>{item.name}</p>
+              </div>
+              <div>
+                <p>{item.date}</p>
+              </div>
+              <div>
+                <div className=' flex justify-center items-center border-2 rounded-full border-[#00a680] w-[25px] h-[25px]'>
+                  <div className=' bg-[#00a680] rounded-full w-[15px] h-[15px]'></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
     </div>
   )
 }

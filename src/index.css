@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
-.home{
+@font-face {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+}
+
+.home {
     background-image: url('./assets/menara-marrakech.jpg');
     background-size: cover;
     background-position: bottom;
@@ -9,11 +17,26 @@
     padding: 0px;
 }
 
-.hassle-freet-tours{
+.hassle-freet-tours {
     background-image: url('./assets/camels-and-people-going-in-desert-2023-11-27-05-06-30-utc-min.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+}
+
+.kaushan-script-regular {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bg-tour-days {
+    background-image: url("./assets/Morocco-Camel-trekking.jpg");
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
     margin: 0px;
     padding: 0px;
