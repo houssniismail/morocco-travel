@@ -17,6 +17,25 @@
     padding: 0px;
 }
 
+.tours {
+    background-image: url('./assets/tours/girl-in-desert.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+}
+
+.aboutUs {
+    background-image: url('./assets/aboutUs/search-form-bg-2.png');
+    background-color: #1e3a5f;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+}
+
 .hassle-freet-tours {
     background-image: url('./assets/camels-and-people-going-in-desert-2023-11-27-05-06-30-utc-min.jpg');
     background-size: cover;

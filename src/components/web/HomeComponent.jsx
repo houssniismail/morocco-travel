@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiRightArrowAlt } from "react-icons/bi";
 import Image from "../../assets/menara-marrakech.jpg"
 import Image_1 from "../../assets/3992-min-1200x800.jpg"
 import image_2 from "../../assets/2151472962-min-1200x800.jpg"
 import data from "../../data/the_best_of_morocco_tours_data.json"
 import { BiCheck } from "react-icons/bi";
+import EvaluationList from './EvaluationList';
+
 
 
 const HomeComponent = () => {
+  // const [isExpanded, setIsExpanded] = useState(false)
+  // const amountOfWords = 36
+
+  // let splittedText = null;
+  // let itCanOverflow = null;
+
+
+
+
 
   const city = [
     {
@@ -63,11 +74,37 @@ const HomeComponent = () => {
     {
       id: 1,
       name: "Angelica T",
-      image: "",
+      image: "src/assets/default-avatar-2020-18.jpg",
       date: "2024-10-09",
-      Comment: "Amazing Morocco trip We had an absolute blast. Abdul was our driver, and he was simply fantastic. He was very patient and kind; my family sometimes wanted different food, and some have diet restrictions, and he went out of his way to drive them to places where they could find food that was suitable for them. We saw so many wonderful places, including the blue city - Chefchaouen, many beautiful ancient cities, breathing architecture, ancient Roman ruins of Volubilis and spent two nights in a luxury desert camp where we were treated like family. They served us wonderful homemade meals and the views of the desert were absolutely breathtaking including the sunset while traveling on camels. Youseff was absolutely wonderful, he was always available and quickly addressed any questions we had, and helped organize the trip according to our liking. The trip was private and customized to our needs. I was a bit nervous about a private trip but after seeing tour busses jam packed with people, I realized our private trip was really the way to go and the price was"
+      comment: "Amazing Morocco trip We had an absolute blast. Abdul was our driver, and he was simply fantastic. He was very patient and kind; my family sometimes wanted different food, and some have diet restrictions, and he went out of his way to drive them to places where they could find food that was suitable for them. We saw so many wonderful places, including the blue city - Chefchaouen, many beautiful ancient cities, breathing architecture, ancient Roman ruins of Volubilis and spent two nights in a luxury desert camp where we were treated like family. They served us wonderful homemade meals and the views of the desert were absolutely breathtaking including the sunset while traveling on camels. Youseff was absolutely wonderful, he was always available and quickly addressed any questions we had, and helped organize the trip according to our liking. The trip was private and customized to our needs. I was a bit nervous about a private trip but after seeing tour busses jam packed with people, I realized our private trip was really the way to go and the price was"
     },
+
   ]
+
+  const tour_guides = [
+    {
+      id: 1,
+      image: "src/assets/Morocco-Travel-Ideas-and-Suggested-Itineraries-min-600x400.jpg",
+      category: "Tours & Trips",
+      name: "Morocco Travel Ideas and Suggested Itineraries",
+
+    },
+    {
+      id: 2,
+      image: "src/assets/Oualidia-Holidays-with-The-Best-of-Morocco-600x400.jpg",
+      category: "Holidays",
+      name: "Oualidia Holidays with The Best of Morocco"
+    },
+    {
+      id: 3,
+      image: "src/assets/mamounia-1-800x347.jpg",
+      category: "Hotels",
+      name: "La Mamounia Luxury Hotel in Marrakech, Morocco",
+    }
+  ]
+
+
+
 
   return (
     <div className=''>
@@ -384,30 +421,54 @@ const HomeComponent = () => {
         </div>
       </div>
 
+
       <div className=' '>
         <div>
-          {evaluation?.map((item, index) => (
-            <div key={index} className="relative">
-              <div>
-                <img src={item.image} alt="" />
-              </div>
-              <div>
-                <p>{item.name}</p>
-              </div>
-              <div>
-                <p>{item.date}</p>
-              </div>
-              <div>
-                <div className=' flex justify-center items-center border-2 rounded-full border-[#00a680] w-[25px] h-[25px]'>
-                  <div className=' bg-[#00a680] rounded-full w-[15px] h-[15px]'></div>
-                </div>
-              </div>
-            </div>
-          ))}
+          <EvaluationList evaluation={evaluation} />
         </div>
       </div>
 
 
+      <div className="px-[41px] flex flex-col gap-10  bg-gray-50">
+        <div className="text-center space-y-4 my-5">
+          <button className="bg-gray-200 py-3 px-10 rounded text-[20px] font-medium">
+            Shared Experiences & Articles From Blog
+          </button>
+          <p className="text-[64px] font-bold capitalize">spotlight & tour guides</p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-10 justify-center items-stretch">
+          {
+            tour_guides?.map((item, index) => (
+              <div key={index} className="flex flex-col bg-white rounded-[10px] overflow-hidden min-h-[520px]">
+                {/* Image */}
+                <div className="h-[250px] w-full">
+                  <img className="w-full h-full object-cover rounded-[10px]" src={item.image} alt="" />
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col justify-between flex-1 bg-gray-100 px-5 py-6">
+                  <div>
+                    <p className="text-[#a6843d] duration-1000 hover:text-[#1e3a5f]">{item.category}</p>
+                  </div>
+
+                  <div>
+                    <p className="font-bold text-[#1e3a5f] text-[30px] duration-1000 hover:text-[#a6843d] ">
+                      {item.name}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 p-[1px] bg-gradient-to-b from-white to-[#a6843d] rounded">
+                    <button className="w-full bg-gray-50 text-[18px] font-medium flex items-center justify-center text-black py-4 rounded duration-300">
+                      continue reading <BiRightArrowAlt size={24} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }

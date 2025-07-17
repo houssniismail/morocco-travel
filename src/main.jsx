@@ -4,6 +4,8 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomeScreen from './pages/HomeScreen'
 import ToursScreen from './pages/ToursScreen'
+import AboutScreen from './pages/AboutScreen'
+import MoroccoScreen from './pages/MoroccoScreen'
 
 const router = createBrowserRouter([
   {
@@ -12,8 +14,16 @@ const router = createBrowserRouter([
     errorElement: <>404 - Page Not Found</>
   },
   {
-    path:"/tours",
-    element:<ToursScreen />
+    path: "/tours",
+    element: <ToursScreen />
+  },
+  {
+    path: "/about-us",
+    element: <AboutScreen />
+  },
+  {
+    path: "/morocco",
+    element: <MoroccoScreen />
   }
 ])
 
